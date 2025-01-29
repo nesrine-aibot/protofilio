@@ -1,61 +1,50 @@
 import React from "react";
 import Tilt from "react-tilt";
-import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
-    <motion.div
-      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-    >
+const ServiceCard = ({ title, icon }) => (
+  <Tilt className='xs:w-[150px] w-[150px]'>
+    <div className='w-full green-pink-gradient p-[1px] rounded-[15px] shadow-card'>
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='bg-tertiary rounded-[15px] py-3 px-6 min-h-[220px] flex justify-evenly items-center flex-col'
       >
         <img
           src={icon}
           alt='web-development'
-          className='w-16 h-16 object-contain'
+          className='w-12 h-12 object-contain'
         />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
+        <h3 className='text-white text-[16px] font-bold text-center'>
           {title}
         </h3>
       </div>
-    </motion.div>
+    </div>
   </Tilt>
 );
+
 
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
-
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm an AI student passionate about artificial intelligence, software engineering, mobile development, and backend systems. I love exploring everything related to computer science, mathematics, and quantum computing, always eager to learn and grow
-      </motion.p>
-
-      <div className='mt-20 flex flex-wrap gap-10'>
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
       </div>
 
+      <p className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+  I am an AI student with a deep passion for <span className='font-bold text-[#915EFF]'>artificial intelligence</span>, complemented by hands-on experience in <span className='font-bold text-[#915EFF]'>software engineering</span>, <span className='font-bold text-[#915EFF]'>mobile development</span>, and <span className='font-bold text-[#915EFF]'>backend systems</span>. My enthusiasm for exploring the vast realms of computer science, mathematics, and <span className='font-bold text-[#915EFF]'>quantum computing</span> fuels my continuous learning and growth. I am always eager to expand my knowledge and contribute to the innovative advancements in these fields.
+</p>
+<br>
+</br>
+<h2 className={styles.sectionHeadText}>Skills & Technologies</h2>
+
+      <div className='mt-20 flex flex-wrap gap-10'>
+        {services.map((service) => (
+          <ServiceCard key={service.title} {...service} />
+        ))}
+      </div>
     </>
   );
 };
