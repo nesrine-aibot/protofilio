@@ -6,7 +6,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ title, icon }) => (
-  <Tilt className='xs:w-[150px] w-[150px]'>
+  <Tilt className='xs:w-[130px] w-[130px]'>
     <div className='w-full green-pink-gradient p-[1px] rounded-[15px] shadow-card'>
       <div
         className='bg-tertiary rounded-[15px] py-3 px-6 min-h-[220px] flex justify-evenly items-center flex-col'
