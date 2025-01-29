@@ -253,11 +253,11 @@ const testimonials = [
 ];
 const projects = [
   {
-    name: "الشبكة الوطنية للشباب الجزائري المتطور",
+    name: "الشبكة الوطنية للشباب الجزائري المتطوع",
     description:
       "A platform for volunteers in Algeria to connect and collaborate more effectively. The website provides volunteering recommendations based on user interests, making volunteer work more accessible and organized. Developed under the supervision of the Higher Council of Youth at the request of the Ministry of Youth (not deployed yet).",
     tags: [],
-    image: tripguide,
+    image: jobit,
     source_code_link: "https://github.com/",
   },
 
