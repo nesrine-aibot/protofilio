@@ -7,6 +7,8 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+import MyPicture from "./myPicture";
+ 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -39,7 +41,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Nesrine BOUZID",
           from_email: form.email,
-          to_email: "your-email@example.com",
+          to_email: "nesrine.bouzid@ensia.edu.dz",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -79,17 +81,22 @@ const Contact = () => {
             <span className='font-bold'>Name:</span> Nesrine BOUZID
           </p>
           <p className='text-white font-medium'>
-            <span className='font-bold'>Email:</span> your-email@example.com
+            <span className='font-bold'>Email:</span> nesrine.bouzid@ensia.edu.dz
+          </p>
+          {/* <p className='text-white font-medium'>
+            <span className='font-bold'>Phone:</span> 
+          </p> */}
+          <p className='text-white font-medium'>
+            <span className='font-bold'>GitHub:</span> <a href='https://github.com/nesrine-aibot' target='_blank' rel='noopener noreferrer' className='text-blue-400'>my github link</a>
           </p>
           <p className='text-white font-medium'>
-            <span className='font-bold'>Phone:</span> +213 123 456 789
+            <span className='font-bold'>LinkedIn:</span> <a href='https://www.linkedin.com/in/nesrine-bouzid-b462b3252/' target='_blank' rel='noopener noreferrer' className='text-blue-400'>my linkdin link</a>
           </p>
+
           <p className='text-white font-medium'>
-            <span className='font-bold'>GitHub:</span> <a href='https://github.com/yourgithub' target='_blank' rel='noopener noreferrer' className='text-blue-400'>github.com/yourgithub</a>
+            <span className='font-bold'>Kaggle:</span> <a href='https://www.linkedin.com/in/nesrine-bouzid-b462b3252/' target='_blank' rel='noopener noreferrer' className='text-blue-400'>my Kaggle link</a>
           </p>
-          <p className='text-white font-medium'>
-            <span className='font-bold'>LinkedIn:</span> <a href='https://linkedin.com/in/yourlinkedin' target='_blank' rel='noopener noreferrer' className='text-blue-400'>linkedin.com/in/yourlinkedin</a>
-          </p>
+
         </div>
       </motion.div>
 
@@ -99,7 +106,7 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-      <myPicture />
+      <MyPicture />
       </motion.div>
     </div>
   );
